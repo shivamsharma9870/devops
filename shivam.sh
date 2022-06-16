@@ -1,8 +1,9 @@
 echo "please enter the file name "
 read filename
-touch $filename
-cat >>$filename this is my shell scripting file 
+vim $filename
 git status
-git add .
-git commit -m "this file adding with the help of shell scripting "
-
+git add $filename
+echo "please enter the message"
+read message
+git commit -m "$message"
+git push origin devops
